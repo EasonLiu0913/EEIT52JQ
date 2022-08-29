@@ -26,6 +26,15 @@
         </li>
         <li class="item-3">item-3</li>
     </ul>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        // $('.level-1').children('.item-01').css('border', '1px solid red')
+        // $('.level-1').find('.item-002').css('border', '1px solid red')
+
+        $('.item-002').parentsUntil('.level-1').css('border', '1px solid red')
+    </script>
 </body>
 
 </html>
