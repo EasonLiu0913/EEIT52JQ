@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic filter</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>td1</td>
+            <td>td2</td>
+            <td>td3</td>
+            <td>td4</td>
+            <td>td5</td>
+        </tr>
+        <tr>
+            <td>td1</td>
+            <td>td2</td>
+            <td>td3</td>
+            <td>td4</td>
+            <td>td5</td>
+        </tr>
+        <tr>
+            <td>td1</td>
+            <td>td2</td>
+            <td>td3</td>
+            <td>td4</td>
+            <td>td5</td>
+        </tr>
+        <tr>
+            <td>td1</td>
+            <td>td2</td>
+            <td>td3</td>
+            <td>td4</td>
+            <td>td5</td>
+        </tr>
+        <tr>
+            <td>td1</td>
+            <td>td2</td>
+            <td>td3</td>
+            <td>td4</td>
+            <td>td5</td>
+        </tr>
+    </table>
+
+    <h1>H1</h1>
+    <h2>H2</h2>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        // $('td:eq(-1)').css('background','red')
+        // $('td').css()
+
+        $('td')
+            .even().css('background', 'red')
+            .odd().css('background', 'blue')
+            .last().css('background', 'green')
+
+
+            // $('td:even').css('background','green')
+            // $('td:odd').css('background','gray')
+            // $('td:first').css('background','red')
+            // $('td:last').css('background','yellow')
+            // $('td:gt(1)').css('background','purple')
+            // $('td:lt(-1)').css('background','brown')
+
+            // $(':header').css('color','brown')
+    </script>
+</body>
+
+</html>
