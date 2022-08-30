@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex4</title>
+    <style>
+        .row {
+            display: flex;
+        }
+
+        .col {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col"><img src="./imgs/person1.jpg" alt=""></div>
+            <div class="col"><img src="./imgs/person2.jpg" alt=""></div>
+            <div class="col"><img src="./imgs/person3.jpg" alt=""></div>
+            <div class="col"><img src="./imgs/person4.jpg" alt=""></div>
+            <div class="col"><img src="./imgs/person5.jpg" alt=""></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        $('img').click(function () {
+            console.log('hi', $(this));
+
+            $(this).css('border', '3px solid red');
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attr prop</title>
+</head>
+
+<body>
+    <button>check</button>
+    <input type="checkbox">
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        $('button').click(function () {
+            console.log('attr:', $('input').attr('checked'));
+
+            // 修改 prop 屬性
+            $('input').prop('checked', true);
+
+            // 取得 prop 的值
+            console.log('prop:', $('input').prop('checked'));
+        })
+
+
+    </script>
+</body>
+
+</html>
