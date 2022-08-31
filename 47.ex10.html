@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex10</title>
+
+    <style>
+        .fontS {
+            font-size: 0.8rem;
+        }
+
+        .fontM {
+            font-size: 1rem;
+        }
+
+        .fontL {
+            font-size: 1.2rem;
+        }
+
+        button.active {
+            background: lightseagreen;
+            border-color: lightseagreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="btn-group">
+        <button id="btnS">S</button>
+        <button id="btnM" class="active">M</button>
+        <button id="btnL">L</button>
+    </div>
+
+    <h2>jQuery</h2>
+
+    <article>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, rem. Ullam ad culpa
+            possimus ratione
+            dicta odit quis consequuntur exercitationem minima sapiente tenetur, quibusdam ipsa aspernatur veritatis
+            laudantium. Ipsa, doloremque.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate iste consequuntur vero facilis velit,
+            voluptatem, debitis nihil eum neque dolorum blanditiis cum harum sunt pariatur amet, quibusdam hic explicabo
+            animi.</p>
+    </article>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        $('#btnS').click(function () {
+            $('p').removeClass('fontM fontL').addClass('fontS')
+            $(this).addClass('active').siblings().removeClass('active')
+        })
+        $('#btnM').click(function () {
+            $('p').removeClass('fontS fontL').addClass('fontM')
+            $(this).addClass('active').siblings().removeClass('active')
+        })
+        $('#btnL').click(function () {
+            $('p').removeClass('fontM fontS').addClass('fontL')
+            $(this).addClass('active').siblings().removeClass('active')
+        })
+    </script>
+</body>
+
+</html>

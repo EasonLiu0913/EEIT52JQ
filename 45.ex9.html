@@ -56,6 +56,36 @@
             </button>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        $('#right').click(function () {
+
+            // console.log($('.box').css('left'));
+            // console.log(parseInt($('.box').css('left')) >= 700);
+            const nowX = parseInt($('.box').css('left'));
+
+            if (nowX >= 700) return;
+            $('.box').css('left', '+=100')
+        })
+
+        $('#down').click(function () {
+            $('.box').css('top', '+=100')
+        })
+
+        $(document).on('keydown', function (e) {
+            console.log('hi keydown', e.keyCode);
+
+            if (e.keyCode === 39) {
+                $('.box').css('left', '+=100')
+            }
+
+            if (e.keyCode === 40) {
+                $('.box').css('top', '+=100')
+            }
+        })
+    </script>
 </body>
 
 </html>
