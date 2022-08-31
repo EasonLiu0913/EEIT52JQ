@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 430px;
+            background-color: chocolate;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        console.log('width:', $('.box').css('width'));
+        console.log('background-color:', $('.box').css('background-color'));
+
+        $('.box').click(function () {
+            let boxWidth = parseInt($('.box').css('width'));
+            boxWidth = boxWidth + 20;
+            console.log('boxWidth:', boxWidth);
+
+            // $('.box').css('width', `${boxWidth}px`)
+
+            // $('.box').css('width', '+=50')
+
+
+            $('.box').css({
+                width: '500px',
+                height: '430px',
+                backgroundColor: 'green',
+            })
+
+
+            // if ($('.box').css('background-color') === 'rgb(210, 105, 30)') {
+            //     $('.box').css('background-color', 'pink')
+            // } else {
+            //     console.log('not chocolate');
+            //     $('.box').css('background-color', 'chocolate')
+            // }
+        })
+    </script>
+</body>
+
+</html>

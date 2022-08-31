@@ -19,6 +19,7 @@
       width: 500%;
       left: 0px;
       transition: 0.5s;
+      /* transform: translateX(0px); */
     }
 
     li img {
@@ -69,6 +70,22 @@
       <li></li>
     </ul>
   </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"></script>
+  <script>
+    $('.slider-dots li').mouseenter(function () {
+      // console.log('hi', $(this));
+      // console.log($(this).index());
+
+      const liIndex = $(this).index();
+      const shiftX = liIndex * -800;
+
+      $('.img-wrap').css('transform', `translateX(${shiftX}px)`)
+
+      $(this).css('background', '#fff').siblings().css('background', 'transparent');
+    })
+  </script>
 
 </body>
 

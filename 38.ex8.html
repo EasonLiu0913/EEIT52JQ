@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex8</title>
+    <style>
+        body {
+            margin: 0;
+            height: 300vh;
+            transition: .5s;
+        }
+
+        .wrap {
+            width: 100%;
+            height: 50px;
+            background-color: #ccc;
+            position: fixed;
+        }
+
+        .progressBar {
+            width: 90%;
+            height: 100%;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="progressBar"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        console.log('body height:', $('body').height());
+
+        $(window).scroll(function () {
+            // console.log('scollTop:', $(window).scrollTop());
+            // console.log($(window).scrollTop() / ($('body').height() - $(window).height()));
+
+
+            const percentage = Math.floor($(window).scrollTop() / ($('body').height() - $(window).height()) * 100);
+
+            // console.log('percentage:', percentage);
+
+
+            $('.progressBar').css('width', `${percentage}%`);
+
+            if ($(window).scrollTop() > 300) {
+                $('body').css('background', 'orange');
+            }
+            else {
+                $('body').css('background', 'transparent');
+            }
+
+        })
+    </script>
+</body>
+
+</html>
