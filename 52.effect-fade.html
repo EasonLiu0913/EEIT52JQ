@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>淡入淡出 fadeout</title>
+    </head>
+    <body>
+        <button id="btn">click me</button>
+        <h1>Hi</h1>
+        <h2>hi</h2>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <!-- <script
+            src="https://code.jquery.com/jquery-3.6.0.slim.js"
+            integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+            crossorigin="anonymous"
+        ></script> -->
+        <script>
+            // 版本一 1000毫秒之後，fade out
+            // $('button').click(function () {
+            //     $('h1').fadeOut(1000);
+            // });
+
+            // 版本二 使用 toggle 可以切換 show & hide
+            // $('button').click(function () {
+            //     // 切換 fadeIn 或 fadeOut ，動畫時間為 1000 毫秒。
+            //     // 動畫結束後，執行 console.log()
+            //     $('h1').fadeToggle(1000, function () {
+            //         console.log('fadeToggle');
+            //     });
+            // });
+
+            // 版本三 1000毫秒之後，fade to 到透明度 0
+            // $('button').click(function () {
+            //     $('h1').fadeTo(1000, 0);
+            // });
+
+            // 版本四 1000毫秒之後，fade to 到透明度 0.3
+            $('button').click(function () {
+                $('h1').fadeTo(1000, 0.3);
+            });
+        </script>
+    </body>
+</html>

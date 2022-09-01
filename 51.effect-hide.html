@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>隱藏與顯示 hide show</title>
+    </head>
+    <body>
+        <button id="btn">click me</button>
+        <h1>Hi</h1>
+        <h2>hi</h2>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <!-- <script
+            src="https://code.jquery.com/jquery-3.6.0.slim.js"
+            integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+            crossorigin="anonymous"
+        ></script> -->
+        <script>
+            // 版本一 只能 hide
+            $('#btn').click(function () {
+                // 讓 h1 在 1000 毫秒後消失。
+                $('h1').hide(1000);
+            });
+
+            // 版本二 使用 toggle 可以切換 show & hide
+            // $('#btn').click(function () {
+            //     // 切換 show 或 hide，動畫時間為 1000 毫秒。
+            //     // 動畫結束後，執行 console.log()
+            //     $('h1').toggle(1000, function () {
+            //         console.log('fadeToggle');
+            //     });
+            // });
+        </script>
+    </body>
+</html>
