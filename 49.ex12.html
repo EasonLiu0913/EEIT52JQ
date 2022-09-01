@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Scroll To Fix</title>
+        <style>
+            body {
+                margin: 0;
+                height: 300vh;
+            }
+            header {
+                height: 330px;
+            }
+            nav {
+                background: #37caeb;
+                padding: 20px;
+                text-align: center;
+                color: #fff;
+            }
+            nav.fixed {
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <header></header>
+        <nav class="nav">I'm nav</nav>
+
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"
+        ></script>
+
+        <script>
+            // 讓 Nav 往下滑的時候，會卡在最頂端
+            // 往上滑又正常移動，不會卡住
+        </script>
+    </body>
+</html>
